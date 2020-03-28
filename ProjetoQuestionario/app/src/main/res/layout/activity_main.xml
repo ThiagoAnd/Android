@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:scrollbars="none">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Questionario" />
+
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/um" />
+
+            <TextView
+                android:layout_width="352dp"
+
+                android:padding="10dp"
+                android:text="Normalmente tem dificuldade para sentar, tomar banho ou ir ao banheiro?" />
+        </TableRow>
+
+
+        <RadioGroup
+            android:id="@+id/groupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <RadioButton
+                android:id="@+id/a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Não tem dificuldade" />
+
+            <RadioButton
+                android:id="@+id/a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem pequena dificuldade" />
+
+            <RadioButton
+                android:id="@+id/a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem grande dificuldade" />
+
+            <RadioButton
+                android:id="@+id/a4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não consegue" />
+        </RadioGroup>
+
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dois" />
+
+            <TextView
+                android:layout_width="352dp"
+
+                android:padding="10dp"
+                android:text="Normalmente tem dificuldade pra correr, levantar objetos pesados, praticar esportes ou realizar trabalhos pesados?" />
+        </TableRow>
+
+
+        <RadioGroup
+            android:id="@+id/groupb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <RadioButton
+                android:id="@+id/b1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Não tem dificuldade" />
+
+            <RadioButton
+                android:id="@+id/b2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem pequena dificuldade" />
+
+            <RadioButton
+                android:id="@+id/b3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem grande dificuldade" />
+
+            <RadioButton
+                android:id="@+id/b4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não consegue" />
+        </RadioGroup>
+
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/tres" />
+
+            <TextView
+                android:layout_width="352dp"
+
+                android:padding="10dp"
+                android:text="Normalmente tem dificuldade pra empurrar mesa ou realizar consertos domesticos?" />
+        </TableRow>
+
+
+        <RadioGroup
+            android:id="@+id/groupc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <RadioButton
+                android:id="@+id/c1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Não tem dificuldade" />
+
+            <RadioButton
+                android:id="@+id/c2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem pequena dificuldade" />
+
+            <RadioButton
+                android:id="@+id/c3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem grande dificuldade" />
+
+            <RadioButton
+                android:id="@+id/c4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não consegue" />
+        </RadioGroup>
+
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/quatro" />
+
+            <TextView
+                android:layout_width="352dp"
+
+                android:padding="10dp"
+                android:text="Normalmente tem dificuldade para subir ladeira ou escada?" />
+        </TableRow>
+
+
+        <RadioGroup
+            android:id="@+id/groupd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <RadioButton
+                android:id="@+id/d1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Não tem dificuldade" />
+
+            <RadioButton
+                android:id="@+id/d2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem pequena dificuldade" />
+
+            <RadioButton
+                android:id="@+id/d3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem grande dificuldade" />
+
+            <RadioButton
+                android:id="@+id/d4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não consegue" />
+        </RadioGroup>
+
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/cinco" />
+
+            <TextView
+                android:layout_width="352dp"
+
+                android:padding="10dp"
+                android:text="Normalmente tem dificuldade para abaixar-se, ajoelhar-se ou curvar-se?" />
+        </TableRow>
+
+
+        <RadioGroup
+            android:id="@+id/groupe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <RadioButton
+                android:id="@+id/e1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Não tem dificuldade" />
+
+            <RadioButton
+                android:id="@+id/e2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem pequena dificuldade" />
+
+            <RadioButton
+                android:id="@+id/e3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem grande dificuldade" />
+
+            <RadioButton
+                android:id="@+id/e4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não consegue" />
+        </RadioGroup>
+
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/seis" />
+
+            <TextView
+                android:layout_width="352dp"
+                android:padding="10dp"
+                android:text="Normalmente tem dificuldade para andar mais do que um quilômetro?" />
+        </TableRow>
+
+
+        <RadioGroup
+            android:id="@+id/groupf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <RadioButton
+                android:id="@+id/f1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Não tem dificuldade" />
+
+            <RadioButton
+                android:id="@+id/f2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem pequena dificuldade" />
+
+            <RadioButton
+                android:id="@+id/f3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem grande dificuldade" />
+
+            <RadioButton
+                android:id="@+id/f4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não consegue" />
+        </RadioGroup>
+
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity=""
+
+                android:src="@drawable/sete" />
+
+            <TextView
+                android:layout_width="258dp"
+                android:padding="10dp"
+                android:text="Normalmente tem dificuldade para andar cerca de cem metros?" />
+        </TableRow>
+
+
+        <RadioGroup
+            android:id="@+id/groupg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <RadioButton
+                android:id="@+id/g1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Não tem dificuldade" />
+
+            <RadioButton
+                android:id="@+id/g2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem pequena dificuldade" />
+
+            <RadioButton
+                android:id="@+id/g3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tem grande dificuldade" />
+
+            <RadioButton
+                android:id="@+id/g4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não consegue" />
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+
+                android:id="@+id/responderButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Responder"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="false" />
+        </LinearLayout>
+        <TextView
+            android:layout_height="20dp"
+            />
+
+
+    </TableLayout>
+
+</ScrollView>

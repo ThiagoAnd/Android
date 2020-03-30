@@ -50,7 +50,6 @@
                 android:id="@+id/a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="Não tem dificuldade" />
 
             <RadioButton
@@ -101,7 +100,7 @@
                 android:id="@+id/b1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+
                 android:text="Não tem dificuldade" />
 
             <RadioButton
@@ -153,7 +152,7 @@
                 android:id="@+id/c1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+
                 android:text="Não tem dificuldade" />
 
             <RadioButton
@@ -205,7 +204,7 @@
                 android:id="@+id/d1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+
                 android:text="Não tem dificuldade" />
 
             <RadioButton
@@ -257,7 +256,7 @@
                 android:id="@+id/e1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+
                 android:text="Não tem dificuldade" />
 
             <RadioButton
@@ -308,7 +307,7 @@
                 android:id="@+id/f1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+
                 android:text="Não tem dificuldade" />
 
             <RadioButton
@@ -359,7 +358,7 @@
                 android:id="@+id/g1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+
                 android:text="Não tem dificuldade" />
 
             <RadioButton

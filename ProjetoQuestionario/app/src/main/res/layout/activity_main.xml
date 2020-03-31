@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
+
             android:text="Questionario" />
 
 
@@ -69,6 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Não consegue" />
+
         </RadioGroup>
 
 
@@ -388,18 +390,17 @@
             android:gravity="center"
             android:orientation="vertical" >
 
-            <com.beardedhen.androidbootstrap.BootstrapButton
-
-                android:id="@+id/responderButton"
-                android:layout_width="wrap_content"
+            <Button
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-
+                android:id="@+id/btResponder"
+                android:layout_margin="6dp"
                 android:text="Responder"
-                app:bootstrapBrand="success"
-                app:bootstrapSize="lg"
-                app:buttonMode="regular"
-                app:roundedCorners="true"
-                app:showOutline="false" />
+                android:textColor="#ffffff"
+                android:background="@drawable/bt_rounded_corners"
+                android:layout_gravity="center"/>
+
+
         </LinearLayout>
         <TextView
             android:layout_height="20dp"

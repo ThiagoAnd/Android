@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+
+    <TableLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textNome"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="E-mail"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <EditText
+
+            android:id="@+id/loginEmail"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o e-mail"
+            android:inputType="textEmailAddress"
+            android:maxLength="20"
+            android:text=""
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/text"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Senha"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <EditText
+
+            android:id="@+id/loginSenha"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite a senha"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:text=""
+            android:textSize="15dp" />
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btResponder"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="40dp"
+                android:background="@drawable/bt_rounded_corners"
+                android:text="Entrar"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

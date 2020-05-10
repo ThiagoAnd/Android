@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@color/colorPrimaryDark"
+    android:fillViewport="true"
+    android:scrollbars="none"
+
+    >
+
+
+    <TableLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical">
+
+        >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity=""
+
+            android:src="@drawable/brunofoto" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/teeeeeeeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="Nome"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/nomeT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:inputType="text"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15dp" />
+
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="E-mail"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <EditText
+
+            android:id="@+id/emailT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="bruno@gmail.com"
+            android:inputType="textEmailAddress"
+            android:maxLength="8"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="Endereço"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/enderecoT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:inputType="text"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="Cidade"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/cidadeT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:inputType="text"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="Bairro"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/bairroT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:inputType="text"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="Estado"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/estadoT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:inputType="text"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="Celular"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/celuarT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:inputType="phone"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15dp" />
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btVoltar"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="40dp"
+                android:background="@drawable/bt_rounded_corners"
+                android:text="Voltar"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+    </TableLayout>
+
+</ScrollView>

@@ -1,3 +1,5 @@
+package com.example.projetosql;
+
 public class Disciplinas {
 
     int _CodDisciplina;

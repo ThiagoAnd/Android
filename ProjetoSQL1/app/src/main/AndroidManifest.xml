@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CadastroAlunoDisciplina"></activity>
+        <activity android:name=".CadastroDisciplina" />
+        <activity android:name=".CadastroAluno" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

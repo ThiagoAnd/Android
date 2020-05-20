@@ -21,17 +21,37 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_cadastro_aluno);
 
         Button btTelaAluno = (Button) findViewById(R.id.botaoAluno) ;
+        Button btTelaDisciplina = (Button) findViewById(R.id.botaoDisciplina);
+        Button btTelaAlunoDisciplina = (Button) findViewById(R.id.botaoAlunoDisciplina);
 
-        final Intent it = new Intent(this, CadastroAluno.class);
+        final Intent itAluno = new Intent(this, CadastroAluno.class);
+        final Intent itDisciplina = new Intent(this,CadastroDisciplina.class);
+        final Intent itAlunoDisciplina = new Intent (this,CadastroAlunoDisciplina.class);
 
         btTelaAluno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(it);
+                startActivity(itAluno);
 
             }
 
         });
+
+        btTelaDisciplina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(itDisciplina);
+            }
+        });
+
+        btTelaAlunoDisciplina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(itAlunoDisciplina);
+            }
+        });
+
+
 
 
 

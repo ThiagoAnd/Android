@@ -13,7 +13,7 @@ public class CadastroAlunoDisciplina extends AppCompatActivity {
 
     private EditText codDisciplinaInp;
     private EditText codAlunoInp;
-    private Button cadastrarAlunoDisciplinaBut
+    private Button cadastrarAlunoDisciplinaBut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,24 @@ public class CadastroAlunoDisciplina extends AppCompatActivity {
         codAlunoInp = (EditText) findViewById(R.id.codAlunoInput);
         cadastrarAlunoDisciplinaBut = (Button) findViewById(R.id.cadastrarAlunoDisciplinaButton);
 
-        cadastrarAlunoDisciplinaBut.setOnClickListener(View );
+        cadastrarAlunoDisciplinaBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inserirAlunoDisciplinaOnClick(v);
+            }
+        });
+    }
+
+    public void inserirAlunoDisciplinaOnClick(View view){
+            AlunoDisciplina alunoDisciplina = new AlunoDisciplina();
+
+
+        //  aluno.setMatricula(Integer.parseInt(entMatricula.getText().toString()));
+
+        alunoDisciplina.set_CodDisciplina(Integer.parseInt(codDisciplinaInp.getText().toString()));
+            alunoDisciplina.set_Matricula(Integer.parseInt(codAlunoInp.getText().toString()));
+
+            bd.inserirAlunoDisciplina(alunoDisciplina);
+
     }
 }

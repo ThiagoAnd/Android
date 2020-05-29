@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -51,6 +53,15 @@ public class CadastroDisciplina extends AppCompatActivity {
         cadastrarDisciplinaBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Animation anim = new AlphaAnimation(0.0f, 1.0f);
+                anim.setDuration(500); //You can manage the blinking time with this parameter
+                anim.setStartOffset(0);
+               /* anim.setRepeatMode(Animation.REVERSE);
+                anim.setRepeatCount(Animation.INFINITE);*/
+                cadastrarDisciplinaBt.startAnimation(anim);
+                /* logarUsuarioBt.clearAnimation();*/
+
                 cadastrarDisciplina(v);
             }
         });

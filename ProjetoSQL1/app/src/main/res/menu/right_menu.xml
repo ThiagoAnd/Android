@@ -21,14 +21,10 @@
                         android:id="@+id/alunoCadastroTela"
                         android:title="Cadastro"
                         app:showAsAction="never" />
-                    <item
-                        android:id="@+id/alunoListagemTela"
-                        android:title="Listagem"
-                        app:showAsAction="never" />
-                    <item
-                        android:id="@+id/loginTela"
-                        android:title="Login"
-                        app:showAsAction="never" />
+                    <!--  <item
+                          android:id="@+id/alunoListagemTela"
+                          android:title="Listagem"
+                          app:showAsAction="never" /> -->
                 </menu>
             </item>
             <item

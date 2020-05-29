@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -37,6 +39,15 @@ public class CadastroPeriodo extends AppCompatActivity {
         cadastrarPeriodoBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Animation anim = new AlphaAnimation(0.0f, 1.0f);
+                anim.setDuration(500); //You can manage the blinking time with this parameter
+                anim.setStartOffset(0);
+               /* anim.setRepeatMode(Animation.REVERSE);
+                anim.setRepeatCount(Animation.INFINITE);*/
+                cadastrarPeriodoBt.startAnimation(anim);
+                /* logarUsuarioBt.clearAnimation();*/
+
                 inserirPeriodoOnClick(v);
             }
         });

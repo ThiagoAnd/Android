@@ -93,10 +93,10 @@ public class MainActivity extends AppCompatActivity {
                 final Intent itDisciplina = new Intent(this, CadastroDisciplina.class);
                 startActivity(itDisciplina);
                 return true;
-            case R.id.loginTela:
+          /*  case R.id.loginTela:
                 final Intent itLogin = new Intent(this, Login.class);
                 startActivity(itLogin);
-                return true;
+                return true;*/
             case R.id.matriculaCadastroTela:
                 final Intent itMatricula = new Intent(this, CadastroMatricula.class);
                 startActivity(itMatricula);

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -41,9 +43,13 @@ public class CadastrarUsuario extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
-
+                Animation anim = new AlphaAnimation(0.0f, 1.0f);
+                anim.setDuration(500); //You can manage the blinking time with this parameter
+                anim.setStartOffset(0);
+               /* anim.setRepeatMode(Animation.REVERSE);
+                anim.setRepeatCount(Animation.INFINITE);*/
+                cadastrarUsuarioTelaBt.startAnimation(anim);
+                /* logarUsuarioBt.clearAnimation();*/
 
                 Usuario usuario = new Usuario();
 

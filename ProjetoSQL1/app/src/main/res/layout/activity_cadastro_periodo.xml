@@ -4,97 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CadastroPeriodo">
 
 
     <TextView
-        android:id="@+id/textViewAluno"
-        android:layout_width="147dp"
-        android:layout_height="48dp"
+        android:id="@+id/textViewPeriodo"
+        android:layout_width="167dp"
+        android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="Cadastro do aluno"
+        android:text="Cadastro do Periodo"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/nomePeriodoInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="124dp"
         android:ems="10"
-        android:hint="Nome do aluno"
+        android:hint="Nome do periodo"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAluno" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewPeriodo" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/inicioPeriodoInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="Data de inicio"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/nomePeriodoInput" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/fimPeriodoInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="CPF"
+        android:hint="Data do fim"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Endereço"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Telefone"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/inicioPeriodoInput" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/cadastrarPeriodoButton"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:layout_margin="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/bt_rounded_corners"
         android:text="Salvar"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/fimPeriodoInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

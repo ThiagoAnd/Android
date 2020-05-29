@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 if (emailS.equalsIgnoreCase("thiago@gmail.com") && (senhaS.equals("123"))) {
                     Toast toast = Toast.makeText(getApplicationContext(), "Usuario encontrado, logando...", Toast.LENGTH_SHORT);
                     toast.show();
+
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {

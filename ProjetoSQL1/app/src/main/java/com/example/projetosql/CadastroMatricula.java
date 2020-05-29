@@ -14,55 +14,76 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class CadastroAluno extends AppCompatActivity {
+public class CadastroMatricula extends AppCompatActivity {
+
+
 
     private BancodeDados bd;
-
-    private EditText entNomeAluno;
-    private EditText entEmail;
-    private EditText entCPF;
-    private EditText entEndereco;
-    private EditText entTelefone;
-    private Button btInserirAluno;
+    private EditText codMatriculaInp;
+    private EditText dataMatriculaInp;
+    private EditText codCursoMatriculaInp;
+    private EditText codPeriodoMatriculaInp;
+    private Button cadastrarMatriculaBt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_aluno);
-
-        /*forçar */
-
+        setContentView(R.layout.activity_cadastro_matricula);
         this.bd = BancodeDados.Sharedinstance(this);
 
+        codCursoMatriculaInp = (EditText) findViewById(R.id.codCursoMatriculaInput);
+        codMatriculaInp = (EditText) findViewById(R.id.codMatriculaInput);
+        dataMatriculaInp = (EditText) findViewById(R.id.dataMatriculaInput);
+        codPeriodoMatriculaInp = (EditText) findViewById(R.id.codPeriodoMatriculaInput);
+        cadastrarMatriculaBt = (Button) findViewById(R.id.cadastrarMatriculaButton);
 
-        entNomeAluno = (EditText) findViewById(R.id.editText2);
-        entEmail = (EditText) findViewById(R.id.editText);
-        entTelefone = (EditText) findViewById(R.id.editText5);
-        entEndereco = (EditText) findViewById(R.id.editText4);
-        entCPF = (EditText) findViewById(R.id.editText3);
-        btInserirAluno = (Button) findViewById(R.id.button);
-
-
-        btInserirAluno.setOnClickListener(new View.OnClickListener() {
+        cadastrarMatriculaBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              btInserirAlunoOnClick(v);
-               // finish();
+                inserirMatriculaOnClick(v);
             }
         });
+    }
+
+    public void inserirMatriculaOnClick(View view) {
+
+        Matricula matricula = new Matricula();
+        //  aluno.setMatricula(Integer.parseInt(entMatricula.getText().toString()));
+
+
+
+        matricula.setCodMatricula(Integer.parseInt(codMatriculaInp.getText().toString()));
+        matricula.setDataMatricula(dataMatriculaInp.getText().toString());
+        matricula.setCodCurso(Integer.parseInt(codCursoMatriculaInp.getText().toString()));
+        matricula.setCodPeriodo(Integer.parseInt(codPeriodoMatriculaInp.getText().toString()));
+
+        /*String.valueOf(resposta)*/
+        long resposta = bd.insertMatricula(matricula);
+        if (resposta > 0) {
+            Toast toast = Toast.makeText(getApplicationContext(), "Matricula cadastrada com sucesso", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, -345);
+            toast.show();
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), "Erro no cadastro da matricula", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, -345);
+            toast.show();
+
+        }
+
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.right_menu,menu);
+        inflater.inflate(R.menu.right_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.alunoCadastroTela:
                 final Intent itAluno = new Intent(this, CadastroAluno.class);
                 startActivity(itAluno);
@@ -90,35 +111,5 @@ public class CadastroAluno extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    public void btInserirAlunoOnClick(View view){
-
-       /* Toast toast = Toast.makeText(getApplicationContext(), "entrei no toast", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-        toast.show();*/
-
-        Aluno aluno = new Aluno();
-
-      //  aluno.setMatricula(Integer.parseInt(entMatricula.getText().toString()));
-        aluno.setNome(entNomeAluno.getText().toString());
-        aluno.setEmail(entEmail.getText().toString());
-        aluno.setEndereco(entEndereco.getText().toString());
-        aluno.setCPF(entCPF.getText().toString());
-        aluno.setTelefone(entTelefone.getText().toString());
-        /*String.valueOf(resposta)*/
-       long resposta = bd.insertAluno(aluno);
-       if (resposta > 0) {
-           Toast toast = Toast.makeText(getApplicationContext(),"Aluno cadastrado com sucesso" , Toast.LENGTH_SHORT);
-           toast.setGravity(Gravity.CENTER_VERTICAL, 0, -345);
-           toast.show();
-       }else {
-           Toast toast = Toast.makeText(getApplicationContext(), "Erro no cadastro do aluno", Toast.LENGTH_SHORT);
-           toast.setGravity(Gravity.CENTER_VERTICAL, 0, -345);
-           toast.show();
-
-       }
-
-
     }
 }

@@ -2,6 +2,29 @@ package com.example.projetosql;
 
 public class Aluno {
 
+    int Matricula;
+    String Nome;
+    String Email;
+    String CPF;
+    String Endereco;
+    String Telefone;
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
+    }
+
+    public String getEndereco() {
+        return Endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        Endereco = endereco;
+    }
+
     public int getMatricula() {
         return Matricula;
     }
@@ -34,10 +57,6 @@ public class Aluno {
         Telefone = telefone;
     }
 
-    int Matricula;
-    String Nome;
-    String Email;
-    String Telefone;
 
 
 

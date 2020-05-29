@@ -4,97 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".CadastroMatricula">
 
     <TextView
-        android:id="@+id/textViewAluno"
-        android:layout_width="147dp"
-        android:layout_height="48dp"
+        android:id="@+id/textViewMatricula"
+        android:layout_width="214dp"
+        android:layout_height="52dp"
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="Cadastro do aluno"
+        android:text="Cadastro da Matricula"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/codCursoMatriculaInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="Nome do aluno"
+        android:hint="Código do curso"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAluno" />
+        app:layout_constraintTop_toBottomOf="@+id/dataMatriculaInput" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/dataMatriculaInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="Data da matricula"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/codMatriculaInput" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/codMatriculaInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="76dp"
         android:ems="10"
-        android:hint="CPF"
+        android:hint="Codigo da matricula"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewMatricula" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/codPeriodoMatriculaInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="Endereço"
+        android:hint="Codigo do periodo"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Telefone"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/codCursoMatriculaInput" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/cadastrarMatriculaButton"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:layout_margin="40dp"
-        android:layout_marginTop="32dp"
         android:background="@drawable/bt_rounded_corners"
         android:text="Salvar"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/codPeriodoMatriculaInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

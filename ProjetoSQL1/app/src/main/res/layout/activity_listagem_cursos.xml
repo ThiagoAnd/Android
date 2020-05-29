@@ -4,13 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lion"
-
-    tools:context=".MainActivity">
-
-
-
-
-
+    tools:context=".ListagemCursos">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

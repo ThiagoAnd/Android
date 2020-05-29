@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,50 +14,54 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class CadastroPeriodo extends AppCompatActivity {
 
+    private BancodeDados bd;
+    private EditText nomePeriodoInp;
+    private EditText dataInicioPeriodoInp;
+    private EditText dataFimPeriodoInp;
+    private Button cadastrarPeriodoBt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //setContentView(R.layout.activity_cadastro_aluno);
-/*
-        Button btTelaAluno = (Button) findViewById(R.id.botaoAluno) ;
-        Button btTelaDisciplina = (Button) findViewById(R.id.botaoDisciplina);
-        Button btTelaAlunoDisciplina = (Button) findViewById(R.id.botaoAlunoDisciplina);
+        setContentView(R.layout.activity_cadastro_periodo);
 
-        final Intent itAluno = new Intent(this, CadastroAluno.class);
-        final Intent itDisciplina = new Intent(this,CadastroDisciplina.class);
-        final Intent itAlunoDisciplina = new Intent (this,CadastroAlunoDisciplina.class);
+        this.bd = BancodeDados.Sharedinstance(this);
 
-        btTelaAluno.setOnClickListener(new View.OnClickListener() {
+        nomePeriodoInp = (EditText) findViewById(R.id.nomePeriodoInput);
+        dataInicioPeriodoInp = (EditText) findViewById(R.id.inicioPeriodoInput);
+        dataFimPeriodoInp = (EditText) findViewById(R.id.fimPeriodoInput);
+        cadastrarPeriodoBt = (Button) findViewById(R.id.cadastrarPeriodoButton);
+
+        cadastrarPeriodoBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(itAluno);
-
-            }
-
-        });
-
-        btTelaDisciplina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(itDisciplina);
+                inserirPeriodoOnClick(v);
             }
         });
+    }
 
-        btTelaAlunoDisciplina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(itAlunoDisciplina);
-            }
-        });
+    public void inserirPeriodoOnClick(View view) {
 
-*/
+        Periodo periodo = new Periodo();
 
+        periodo.setNome(nomePeriodoInp.getText().toString());
+        periodo.setDataInicio(dataInicioPeriodoInp.getText().toString());
+        periodo.setDataFim(dataFimPeriodoInp.getText().toString());
 
+        /*String.valueOf(resposta)*/
+        long resposta = bd.inserirPeriodo(periodo);
+        if (resposta > 0) {
+            Toast toast = Toast.makeText(getApplicationContext(), "Periodo cadastrado com sucesso", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, -345);
+            toast.show();
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), "Erro no cadastro do periodo", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, -345);
+            toast.show();
 
+        }
 
 
     }
@@ -66,13 +69,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.right_menu,menu);
+        inflater.inflate(R.menu.right_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.alunoCadastroTela:
                 final Intent itAluno = new Intent(this, CadastroAluno.class);
                 startActivity(itAluno);
@@ -92,10 +95,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.disciplinaCadastroTela:
                 final Intent itDisciplina = new Intent(this, CadastroDisciplina.class);
                 startActivity(itDisciplina);
-                return true;
-            case R.id.loginTela:
-                final Intent itLogin = new Intent(this, Login.class);
-                startActivity(itLogin);
                 return true;
             case R.id.matriculaCadastroTela:
                 final Intent itMatricula = new Intent(this, CadastroMatricula.class);

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,50 +14,53 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class CadastroCurso extends AppCompatActivity {
 
+    private BancodeDados bd;
+    private EditText nomeCursoInp;
+    private EditText turnoCursoInp;
+    private Button cadastrarCursoBt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //setContentView(R.layout.activity_cadastro_aluno);
-/*
-        Button btTelaAluno = (Button) findViewById(R.id.botaoAluno) ;
-        Button btTelaDisciplina = (Button) findViewById(R.id.botaoDisciplina);
-        Button btTelaAlunoDisciplina = (Button) findViewById(R.id.botaoAlunoDisciplina);
+        setContentView(R.layout.activity_cadastro_curso);
+        this.bd = BancodeDados.Sharedinstance(this);
 
-        final Intent itAluno = new Intent(this, CadastroAluno.class);
-        final Intent itDisciplina = new Intent(this,CadastroDisciplina.class);
-        final Intent itAlunoDisciplina = new Intent (this,CadastroAlunoDisciplina.class);
+        nomeCursoInp = (EditText) findViewById(R.id.nomeCursoInput);
+        turnoCursoInp = (EditText) findViewById(R.id.turnoCursoInput);
+        cadastrarCursoBt = (Button) findViewById(R.id.cadastrarCursoButton);
 
-        btTelaAluno.setOnClickListener(new View.OnClickListener() {
+        cadastrarCursoBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(itAluno);
-
-            }
-
-        });
-
-        btTelaDisciplina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(itDisciplina);
+                inserirCursoOnClick(v);
             }
         });
+    }
 
-        btTelaAlunoDisciplina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(itAlunoDisciplina);
-            }
-        });
-
-*/
+    public void inserirCursoOnClick(View view){
 
 
+        Curso curso = new Curso();
 
+        curso.setNome(nomeCursoInp.getText().toString());
+        curso.setTurno(turnoCursoInp.getText().toString());
+
+
+
+        /*String.valueOf(resposta)*/
+        long resposta = bd.insertCurso(curso);
+        if (resposta > 0) {
+            Toast toast = Toast.makeText(getApplicationContext(),"Curso cadastrado com sucesso" , Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, -345);
+            toast.show();
+        }else {
+            Toast toast = Toast.makeText(getApplicationContext(), "Erro no cadastro do curso", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, -345);
+            toast.show();
+
+        }
 
 
     }
@@ -92,10 +94,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.disciplinaCadastroTela:
                 final Intent itDisciplina = new Intent(this, CadastroDisciplina.class);
                 startActivity(itDisciplina);
-                return true;
-            case R.id.loginTela:
-                final Intent itLogin = new Intent(this, Login.class);
-                startActivity(itLogin);
                 return true;
             case R.id.matriculaCadastroTela:
                 final Intent itMatricula = new Intent(this, CadastroMatricula.class);

@@ -3,8 +3,17 @@ package com.example.projetosql;
 public class Disciplinas {
 
     int _CodDisciplina;
+    int codPeriodo;
     String entNomeDisciplina;
     String entCargaHoraria;
+
+    public int getCodPeriodo() {
+        return codPeriodo;
+    }
+
+    public void setCodPeriodo(int codPeriodo) {
+        this.codPeriodo = codPeriodo;
+    }
 
     public int get_CodDisciplina() {
         return _CodDisciplina;

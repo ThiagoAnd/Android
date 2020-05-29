@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lampada2"
+    tools:context=".CadastroCurso">
+
+
+    <EditText
+        android:id="@+id/usuarioLoginInput"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="111dp"
+        android:backgroundTint="@android:color/white"
+        android:drawableTint="@android:color/white"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/senhaLoginInput"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usuarioLoginInput"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="112dp"
+        android:backgroundTint="@android:color/white"
+        android:drawableTint="@android:color/white"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usuarioLoginInput" />
+
+    <Button
+        android:id="@+id/logarUsuarioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_below="@+id/senhaLoginInput"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bt_rounded_corners"
+        android:text="Login"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senhaLoginInput" />
+
+    <Button
+        android:id="@+id/cadastrarUsuarioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_alignTop="@+id/logarUsuarioButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bt_rounded_corners2"
+        android:text="Cadastrar"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastrarCursoButton" />
+
+</RelativeLayout>

@@ -8,12 +8,14 @@
 
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="147dp"
+        android:id="@+id/textViewDisciplina"
+        android:layout_width="199dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="Cadastro da Disciplina"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,13 +24,25 @@
         android:id="@+id/disciplinaInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Nome da Disciplina"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/codPeriodoDisciplinaInput" />
+
+    <EditText
+        android:id="@+id/codPeriodoDisciplinaInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:ems="10"
+        android:hint="Codigo periodo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDisciplina" />
 
     <EditText
         android:id="@+id/cargaHorariaInput"
@@ -36,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="Carga Horaria"
+        android:hint="Carga horaria"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,12 +58,30 @@
 
     <Button
         android:id="@+id/cadastrarDisciplinaBt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="Cadastrar"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:layout_marginTop="152dp"
+        android:background="@drawable/bt_rounded_corners"
+        android:text="Salvar"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cargaHorariaInput" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteCodPeriodoDisciplinaInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="52dp"
+        android:hint="AutoCompleteTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDisciplina" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

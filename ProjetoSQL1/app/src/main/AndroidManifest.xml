@@ -5,14 +5,20 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Projeto Cadastro"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CadastroAlunoDisciplina"></activity>
+        <activity android:name=".CadastrarUsuario"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ListagemCursos" />
+        <activity android:name=".CadastroMatricula" />
+        <activity android:name=".CadastroPeriodo" />
+        <activity android:name=".CadastroCurso" />
+        <activity android:name=".CadastroAlunoDisciplina" />
         <activity android:name=".CadastroDisciplina" />
         <activity android:name=".CadastroAluno" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

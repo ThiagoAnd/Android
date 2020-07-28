@@ -1,0 +1,118 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:scrollbars="none">
+    <TableLayout
+        android:id="@+id/topoTableLayoutAluno"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2,3,4">
+        <TextView
+            android:id="@+id/textviewAlunoTela"
+            android:layout_width="214dp"
+            android:layout_height="52dp"
+
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Listagem de Alunos"
+            android:textSize="18sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow8">
+
+            <Button
+                android:id="@+id/CodigoAlunoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:text="Matricula"
+
+                android:textSize="10dp"/>
+            <Button
+                android:id="@+id/NomeAlunoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+
+            <Button
+                android:id="@+id/EmailAlunoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+            <Button
+                android:id="@+id/CPFAlunoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CPF"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+            <Button
+                android:id="@+id/EnderecoAlunoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endereco"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+            <Button
+                android:id="@+id/TelefoneAlunoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telefone"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+            <Button
+            android:id="@+id/DataMatriculaAlunoTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:clickable="false"
+            android:background="@drawable/bt_retangule_corners"
+            android:textSize="10dp"/>
+            <Button
+                android:id="@+id/EditarAlunoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notas"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+        </TableRow>
+
+        <ScrollView
+            android:id="@+id/linearLayoutCursoListagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tableLayoutAlunoListagem"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+
+
+            </TableLayout>
+        </ScrollView>
+    </TableLayout>
+</HorizontalScrollView>

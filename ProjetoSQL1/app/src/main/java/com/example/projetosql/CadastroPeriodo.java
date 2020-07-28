@@ -86,9 +86,10 @@ public class CadastroPeriodo extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+        switch (item.getItemId()){
             case R.id.alunoCadastroTela:
                 final Intent itAluno = new Intent(this, CadastroAluno.class);
+                itAluno.putExtra("Chave", "PassagemParametro");
                 startActivity(itAluno);
                 return true;
             case R.id.homeTela:
@@ -106,6 +107,26 @@ public class CadastroPeriodo extends AppCompatActivity {
             case R.id.disciplinaCadastroTela:
                 final Intent itDisciplina = new Intent(this, CadastroDisciplina.class);
                 startActivity(itDisciplina);
+                return true;
+            case R.id.periodoListagemTela:
+                final Intent itListagemPeriodo = new Intent(this, ListagemPeriodo.class);
+                startActivity(itListagemPeriodo);
+                return true;
+            case R.id.alunoListagemTela:
+                final Intent itListagemAluno = new Intent(this, ListarAlunos.class);
+                startActivity(itListagemAluno);
+                return true;
+            case R.id.cursoListagemTela:
+                final Intent itLogin = new Intent(this, ListagemCursos.class);
+                startActivity(itLogin);
+                return true;
+            case R.id.disciplinaListagemTela:
+                final Intent itListagemDisciplina = new Intent(this, ListagemDisciplinas.class);
+                startActivity(itListagemDisciplina);
+                return true;
+            case R.id.matriculaListagemTela:
+                final Intent itListagemMatricula = new Intent(this, ListagemMatriculas.class);
+                startActivity(itListagemMatricula);
                 return true;
             case R.id.matriculaCadastroTela:
                 final Intent itMatricula = new Intent(this, CadastroMatricula.class);

@@ -9,10 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CadastrarUsuario"></activity>
+        <activity android:name=".ListagemNotas"></activity>
+        <activity android:name=".AtribuicaoNotas" />
+        <activity android:name=".ListagemMatriculas" />
+        <activity android:name=".ListagemDisciplinas" />
+        <activity android:name=".ListagemPeriodo" />
+        <activity android:name=".ListarAlunos" />
+        <activity android:name=".Cons" />
+        <activity android:name=".CadastrarUsuario" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ListagemCursos" />
-        <activity android:name=".CadastroMatricula" />
+        <activity
+            android:name=".CadastroMatricula"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".CadastroPeriodo" />
         <activity android:name=".CadastroCurso" />
         <activity android:name=".CadastroAlunoDisciplina" />

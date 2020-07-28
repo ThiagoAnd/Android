@@ -20,13 +20,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 public class CadastroDisciplina extends AppCompatActivity {
 
     private BancodeDados bd;
-
+    private String codigo;
     private EditText disciplinaInp;
     private EditText cargaHorariaInp;
     private EditText codPeriodoInp;
@@ -37,17 +42,24 @@ public class CadastroDisciplina extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_disciplina);
+       // final Date currentTime = Calendar.getInstance().getTime();
+       // final String data =( new SimpleDateFormat( "dd-MM-yyyy' / 'HH:mm" ) ).format( Calendar.getInstance().getTime() );
+
+
+        Date date = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy' / 'HH:mm");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("GMT-3"));
+        final String strDate = dateFormat.format(date);
+
 
         this.bd = BancodeDados.Sharedinstance(this);
 
+        carregarCodPeriodo();
 
         disciplinaInp = (EditText) findViewById(R.id.disciplinaInput);
         cargaHorariaInp = (EditText) findViewById(R.id.cargaHorariaInput);
         cadastrarDisciplinaBt = (Button) findViewById(R.id.cadastrarDisciplinaBt);
-        codPeriodoInp = (EditText) findViewById(R.id.codPeriodoDisciplinaInput);
-        autoCodPeriodoDisciplinaInp = (AutoCompleteTextView) findViewById(R.id.autoCompleteCodPeriodoDisciplinaInput);
-
-
+        //codPeriodoInp = (EditText) findViewById(R.id.codPeriodoDisciplinaInput);
 
 
         cadastrarDisciplinaBt.setOnClickListener(new View.OnClickListener() {
@@ -69,44 +81,47 @@ public class CadastroDisciplina extends AppCompatActivity {
         autoCodPeriodoDisciplinaInp.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                carregarCodPeriodo();
 
 
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                carregarCodPeriodo();
+                if(!autoCodPeriodoDisciplinaInp.getText().toString().equals("")) {
+                   codigo =  bd.buscarCodPeriodo(s.toString());
+                   /* Toast toast = Toast.makeText(getApplicationContext(), strDate, Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER_VERTICAL, 0, -345);
+                    toast.show();*/
+                }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                carregarCodPeriodo();
+
             }
         });
 
 
     }
 
-    public void carregarCodPeriodo(){
-        List<Periodo> periodos = bd.listarPeriodos();
 
-        List<Integer> listaCod = new ArrayList<>();
 
-        for (Periodo p : periodos){
-        listaCod.add(p.getCodPeriodo());
+    public void carregarCodPeriodo() {
+        List<Periodo> lista = bd.listarPeriodos();
+
+        autoCodPeriodoDisciplinaInp =  findViewById(R.id.autoCompleteCodPeriodoDisciplinaInput);
+
+
+
+        List<String> listaCod = new ArrayList<>();
+
+        for (Periodo p : lista) {
+            listaCod.add(p.getNome());
 
         }
-        List<String> listaNome = new ArrayList<>();
 
-        for (Periodo p : periodos){
-            listaNome.add(p.getNome());
-
-        }
-
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,listaNome);
-       autoCodPeriodoDisciplinaInp.setThreshold(1);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, listaCod);
+        autoCodPeriodoDisciplinaInp.setThreshold(1);
         autoCodPeriodoDisciplinaInp.setAdapter(adapter);
 
     }
@@ -121,9 +136,10 @@ public class CadastroDisciplina extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+        switch (item.getItemId()){
             case R.id.alunoCadastroTela:
                 final Intent itAluno = new Intent(this, CadastroAluno.class);
+                itAluno.putExtra("Chave", "PassagemParametro");
                 startActivity(itAluno);
                 return true;
             case R.id.homeTela:
@@ -142,6 +158,26 @@ public class CadastroDisciplina extends AppCompatActivity {
                 final Intent itDisciplina = new Intent(this, CadastroDisciplina.class);
                 startActivity(itDisciplina);
                 return true;
+            case R.id.periodoListagemTela:
+                final Intent itListagemPeriodo = new Intent(this, ListagemPeriodo.class);
+                startActivity(itListagemPeriodo);
+                return true;
+            case R.id.alunoListagemTela:
+                final Intent itListagemAluno = new Intent(this, ListarAlunos.class);
+                startActivity(itListagemAluno);
+                return true;
+            case R.id.cursoListagemTela:
+                final Intent itLogin = new Intent(this, ListagemCursos.class);
+                startActivity(itLogin);
+                return true;
+            case R.id.disciplinaListagemTela:
+                final Intent itListagemDisciplina = new Intent(this, ListagemDisciplinas.class);
+                startActivity(itListagemDisciplina);
+                return true;
+            case R.id.matriculaListagemTela:
+                final Intent itListagemMatricula = new Intent(this, ListagemMatriculas.class);
+                startActivity(itListagemMatricula);
+                return true;
             case R.id.matriculaCadastroTela:
                 final Intent itMatricula = new Intent(this, CadastroMatricula.class);
                 startActivity(itMatricula);
@@ -156,7 +192,8 @@ public class CadastroDisciplina extends AppCompatActivity {
         Disciplinas disciplina = new Disciplinas();
 
         // matricula.setCodMatricula(Integer.parseInt(codMatriculaInp.getText().toString()));
-        disciplina.setCodPeriodo(Integer.parseInt(codPeriodoInp.getText().toString()));
+        //disciplina.setCodPeriodo(Integer.parseInt(autoCodPeriodoDisciplinaInp.getText().toString()));
+        disciplina.setCodPeriodo(Integer.parseInt(codigo));
         disciplina.setEntNomeDisciplina(disciplinaInp.getText().toString());
         disciplina.setEntCargaHoraria(cargaHorariaInp.getText().toString());
 

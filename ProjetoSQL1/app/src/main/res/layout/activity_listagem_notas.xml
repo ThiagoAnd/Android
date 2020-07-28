@@ -1,0 +1,102 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:scrollbars="none">
+    <TableLayout
+        android:id="@+id/topoTableLayoutCurso"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2">
+        <TextView
+            android:id="@+id/textViewMatricula"
+            android:layout_width="214dp"
+            android:layout_height="52dp"
+
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Listagem de Notas"
+            android:textSize="18sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow8">
+
+            <Button
+                android:id="@+id/CodigoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:text="Disciplina"
+
+                android:textSize="10dp"/>
+            <Button
+                android:id="@+id/NomeTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nota 1"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+
+            <Button
+                android:id="@+id/TurnoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nota 2"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+            <Button
+                android:id="@+id/EditarTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Media"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+
+        </TableRow>
+
+        <ScrollView
+            android:id="@+id/linearLayoutCursoListagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tableLayoutNotasListagem"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1,2">
+
+
+
+            </TableLayout>
+        </ScrollView>
+        <RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                />
+            <Button
+                android:id="@+id/btXmlListagemNotas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bt_retangule_corners"
+                android:text="OK"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+    </TableLayout>
+</HorizontalScrollView>

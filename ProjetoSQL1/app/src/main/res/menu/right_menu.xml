@@ -13,37 +13,81 @@
                 android:title="Home"
                 app:showAsAction="never" />
             <item
-                android:id="@+id/menuAldddduno"
+                android:id="@+id/MenuAluno"
                 android:title="Aluno"
                 app:showAsAction="never">
                 <menu>
                     <item
                         android:id="@+id/alunoCadastroTela"
-                        android:title="Cadastro"
+                        android:title="Cadastrar"
                         app:showAsAction="never" />
-                    <!--  <item
-                          android:id="@+id/alunoListagemTela"
-                          android:title="Listagem"
-                          app:showAsAction="never" /> -->
+                    <item
+                        android:id="@+id/alunoListagemTela"
+                        android:title="Listar"
+                        app:showAsAction="never" />
                 </menu>
             </item>
             <item
-                android:id="@+id/cursoCadastroTela"
+                android:id="@+id/MenuCurso"
                 android:title="Curso"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/periodoCadastroTela"
-                android:title="Periodo"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/disciplinaCadastroTela"
-                android:title="Disciplina"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/matriculaCadastroTela"
-                android:title="Matricula"
-                app:showAsAction="never" />
+                app:showAsAction="never">
+                <menu>
+                    <item
+                        android:id="@+id/cursoCadastroTela"
+                        android:title="Cadastrar"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/cursoListagemTela"
+                        android:title="Listar "
+                        app:showAsAction="never" />
+                </menu>
 
+            </item>
+            <item
+                android:id="@+id/MenuPeriodo"
+                android:title="Periodo"
+                app:showAsAction="never">
+                <menu>
+                    <item
+                        android:id="@+id/periodoCadastroTela"
+                        android:title="Cadastrar"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/periodoListagemTela"
+                        android:title="Listar"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+            <item
+                android:id="@+id/MenuDisciplina"
+                android:title="Disciplina"
+                app:showAsAction="never" >
+                <menu>
+                    <item
+                        android:id="@+id/disciplinaCadastroTela"
+                        android:title="Cadastrar"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/disciplinaListagemTela"
+                        android:title="Listar"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+            <item
+                android:id="@+id/MenuMatricula"
+                android:title="Matricula"
+                app:showAsAction="never" >
+                <menu>
+                    <item
+                        android:id="@+id/matriculaCadastroTela"
+                        android:title="Cadastrar"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/matriculaListagemTela"
+                        android:title="Listar"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
 
         </menu>
     </item>

@@ -1,0 +1,94 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:scrollbars="none">
+    <TableLayout
+        android:id="@+id/topoTableLayoutPeriodo"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2,3">
+        <TextView
+            android:id="@+id/textviewPeriodoTela"
+            android:layout_width="214dp"
+            android:layout_height="52dp"
+
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Listagem de Periodos"
+            android:textSize="18sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow8">
+
+            <Button
+                android:id="@+id/CodigoPeriodoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:text="Codigo"
+
+                android:textSize="10dp"/>
+            <Button
+                android:id="@+id/NomePeriodoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+
+            <Button
+                android:id="@+id/InicioPeriodoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+            <Button
+                android:id="@+id/FimPeriodoTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fim"
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+            <Button
+                android:id="@+id/EditarDisciplinaTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:clickable="false"
+                android:background="@drawable/bt_retangule_corners"
+                android:textSize="10dp"/>
+        </TableRow>
+
+        <ScrollView
+            android:id="@+id/linearLayoutCursoListagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tableLayoutPeriodoListagem"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+
+
+            </TableLayout>
+        </ScrollView>
+    </TableLayout>
+</HorizontalScrollView>
